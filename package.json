@@ -1,0 +1,12 @@
+{
+  "name": "personal-site",
+  "private": true,
+  "scripts": {
+    "build": "hugo --minify",
+    "deploy": "wrangler pages deploy public --project-name personal-site"
+  },
+  "devDependencies": {
+    "hugo-bin": "^0.140.1",
+    "wrangler": "^4.154.0"
+  }
+}
