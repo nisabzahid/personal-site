@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <div class="container narrow">
+    <header class="page-header">
+      <p class="eyebrow">{{ .Section | humanize }}</p>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="list-body">
+      {{ .Content }}
+    </div>
+
+    {{ if .Pages }}
+      <div class="article-list">
+        {{ range .Pages.ByDate.Reverse }}
+          <article class="article-item">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <p>{{ .Summary }}</p>
+            {{ with .Params.tags }}
+              <div class="meta-row tags">
+                {{ range . }}
+                  <span><a href="{{ "tags/" | relURL }}{{ . | urlize }}/">{{ . }}</a></span>
+                {{ end }}
+              </div>
+            {{ end }}
+          </article>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

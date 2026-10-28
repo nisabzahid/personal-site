@@ -1,0 +1,71 @@
+{{ define "main" }}
+  <div class="container">
+    <section class="hero">
+      <p class="eyebrow">Software Engineer</p>
+      <h1>{{ site.Data.site.name }}</h1>
+      <p class="lede">{{ site.Data.site.intro }}</p>
+    </section>
+
+    <section class="section-block">
+      <h2>Selected projects</h2>
+      <div class="project-list">
+        {{ range first 4 site.Data.projects }}
+          <article class="project-item">
+            <h3>{{ .name }}</h3>
+            <p>{{ .description }}</p>
+            <div class="meta-row">
+              {{ range .technologies }}
+                <span>{{ . }}</span>
+              {{ end }}
+            </div>
+            <div class="link-row">
+              {{ if .source }}<a href="{{ .source }}" target="_blank" rel="noreferrer">Source</a>{{ end }}
+              {{ if .demo }}<a href="{{ .demo }}" target="_blank" rel="noreferrer">Demo</a>{{ end }}
+            </div>
+          </article>
+        {{ end }}
+      </div>
+      <p class="read-more"><a href="{{ "/projects/" | relURL }}">See all projects →</a></p>
+    </section>
+
+    <section class="section-block">
+      <h2>Recent writing</h2>
+      <div class="article-list">
+        {{ range first 3 (where site.RegularPages "Section" "blog") }}
+          <article class="article-item">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <p>{{ .Summary }}</p>
+          </article>
+        {{ end }}
+      </div>
+      <p class="read-more"><a href="{{ "/blog/" | relURL }}">More articles →</a></p>
+    </section>
+
+    <section class="section-block">
+      <h2>Tools and interests</h2>
+      <div class="tech-grid">
+        {{ range site.Data.site.technologies }}
+          <div>
+            <h3>{{ .title }}</h3>
+            <ul>
+              {{ range .items }}
+                <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="section-block">
+      <h2>Connect</h2>
+      <div class="link-stack">
+        {{ with .Site.Params.github }}<a href="{{ . }}" target="_blank" rel="noreferrer">GitHub</a>{{ end }}
+        {{ with .Site.Params.linkedin }}<a href="{{ . }}" target="_blank" rel="noreferrer">LinkedIn</a>{{ end }}
+        <a href="mailto:nisabzahid@gmail.com">Email</a>
+        <a href="{{ "/resume/" | relURL }}">Résumé</a>
+      </div>
+    </section>
+  </div>
+{{ end }}

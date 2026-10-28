@@ -1,0 +1,36 @@
+name: "Md. Nisab Bin Zahid"
+tagline: "Software Engineer"
+location: "Bangladesh"
+intro: |
+  I build reliable backend systems, APIs, and platform tooling with a strong focus on Python, Django, PostgreSQL, Linux, and cloud infrastructure.
+
+bio: |
+  Software engineer based in Bangladesh, with interests in backend engineering, distributed systems, system design, Linux, and AI engineering. I work across Python, Django, PostgreSQL, and cloud tooling, and enjoy building practical software that is straightforward to operate and maintain.
+
+navigation:
+  - name: Home
+    url: /
+  - name: About
+    url: /about/
+  - name: Projects
+    url: /projects/
+  - name: Blog
+    url: /blog/
+  - name: Resume
+    url: /resume/
+
+socials:
+  - name: GitHub
+    url: https://github.com/nisabzahid
+  - name: LinkedIn
+    url: https://linkedin.com/in/nisabzahid
+
+technologies:
+  - title: Languages
+    items: [Python, Go, JavaScript, TypeScript, SQL, Shell]
+  - title: Frameworks & libraries
+    items: [Django, Django REST Framework, React, Next.js, FastAPI, PostgreSQL]
+  - title: Infrastructure
+    items: [Linux, Docker, AWS, CI/CD, APIs, System Design]
+  - title: Tools
+    items: [Git, PostgreSQL, Nginx, Docker Compose, Vercel, Cloudflare]

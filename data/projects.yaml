@@ -1,0 +1,23 @@
+- name: "App Steward"
+  description: "A native GTK4 software manager for Ubuntu and Debian-based Linux systems. It lets users inspect, update, reinstall, and safely uninstall APT, Flatpak, Snap, and AppImage applications."
+  source: "https://github.com/nisabzahid/App-steward"
+  demo: ""
+  technologies: ["Python", "GTK4", "Linux", "APT", "Flatpak", "Snap"]
+
+- name: "Ansible Django Stack"
+  description: "An Ansible playbook for provisioning a Django app with Nginx, Gunicorn, PostgreSQL, Celery, RabbitMQ, Supervisor, Virtualenv, and Memcached."
+  source: "https://github.com/nisabzahid/ansible-django-stack"
+  demo: ""
+  technologies: ["Ansible", "Django", "Nginx", "PostgreSQL", "Gunicorn", "Linux"]
+
+- name: "Bikikini Shop"
+  description: "An e-commerce site built with Django, focused on a storefront and product experience in a practical web application setting."
+  source: "https://github.com/nisabzahid/bikikini.shop"
+  demo: ""
+  technologies: ["Django", "Python", "PostgreSQL", "HTML", "CSS"]
+
+- name: "Awesome Scalability"
+  description: "A curated reading list of materials around scalable, reliable, and performant large-scale systems."
+  source: "https://github.com/nisabzahid/awesome-scalability"
+  demo: ""
+  technologies: ["Documentation", "Systems Design", "Architecture", "Learning"]

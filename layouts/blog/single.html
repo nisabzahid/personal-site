@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <div class="container narrow">
+    <article class="content-page">
+      <header class="page-header">
+        <p class="eyebrow">{{ .Section | humanize }}</p>
+        <h1>{{ .Title }}</h1>
+        <div class="meta-row">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+          {{ with .Params.tags }}
+            {{ range . }}
+              <span><a href="{{ "tags" | relURL }}/{{ . | urlize }}/">{{ . }}</a></span>
+            {{ end }}
+          {{ end }}
+        </div>
+      </header>
+      <div class="content-body">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+{{ end }}
