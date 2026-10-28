@@ -1,3 +1,35 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://nisabzahid.vercel.app/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+defaultContentLanguage = 'en'
+title = 'Md. Nisab Bin Zahid'
+
+[params]
+  description = 'Software engineer focused on backend engineering, Python, Django, PostgreSQL, Linux, cloud infrastructure, and AI engineering.'
+  author = 'Md. Nisab Bin Zahid'
+  github = 'https://github.com/nisabzahid'
+  linkedin = 'https://linkedin.com/in/nisabzahid'
+  siteurl = 'https://nisabzahid.vercel.app/'
+  resume = '/resume/'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ''
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    style = 'github'
+
+[outputs]
+  home = ['HTML', 'RSS']
+  page = ['HTML']
+  section = ['HTML', 'RSS']
+  taxonomy = ['HTML']
+  term = ['HTML']
