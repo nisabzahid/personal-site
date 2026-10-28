@@ -1,4 +1,4 @@
-baseURL = 'https://nisabzahid.vercel.app/'
+baseURL = 'https://personal-site.nisabzahid20.workers.dev/'
 languageCode = 'en-us'
 defaultContentLanguage = 'en'
 title = 'Md. Nisab Bin Zahid'
@@ -8,7 +8,7 @@ title = 'Md. Nisab Bin Zahid'
   author = 'Md. Nisab Bin Zahid'
   github = 'https://github.com/nisabzahid'
   linkedin = 'https://linkedin.com/in/nisabzahid'
-  siteurl = 'https://nisabzahid.vercel.app/'
+  siteurl = 'https://personal-site.nisabzahid20.workers.dev/'
   resume = '/resume/'
 
 [markup]
